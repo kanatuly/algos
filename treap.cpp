@@ -14,7 +14,7 @@ int get_min(pnode t){
 }
 
 void upd(pnode t){
-    t->mn = min(min(get_min(t->l), get_min(t->r)), t->x);
+    t->mn = min({t->x, get_min(t->l), get_min(t->r)});
 }
 
 pnode merge(pnode l, pnode r){
